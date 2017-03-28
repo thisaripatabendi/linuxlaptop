@@ -1,0 +1,26 @@
+instructions.configure = \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../conf/device-types/);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/server/webapps/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/webapps/,target:${installFolder}/../../deployment/server/webapps/,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../resources/sketches/);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../resources/sketches/linuxlaptop/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/agent/,target:${installFolder}/../../resources/sketches/linuxlaptop/,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/dbscripts/,target:${installFolder}/../../../dbscripts/cdm/plugins/linuxlaptop,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/datasources/,target:${installFolder}/../../conf/datasources/,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/server/jaggeryapps/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/jaggeryapps/,target:${installFolder}/../../deployment/server/jaggeryapps/,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../database/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/database/,target:${installFolder}/../../database/,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/server/carbonapps/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.laptop.linuxlaptop_${feature.version}/carbonapps/,target:${installFolder}/../../deployment/server/carbonapps/,overwrite:true);\
+
+instructions.unconfigure = \
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/webapps/linuxlaptop.war);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/webapps/linuxlaptop);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../../dbscripts/cdm/plugins/linuxlaptop);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../conf/datasources/linuxlaptop-datasources.xml);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../database/linuxlaptopDM_DB.h2.db);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/jaggeryapps/devicemgt/app/units/cdmf.unit.device.type.linuxlaptop.device-view);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/jaggeryapps/devicemgt/app/units/cdmf.unit.device.type.linuxlaptop.type-view);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/jaggeryapps/devicemgt/app/units/cdmf.unit.device.type.linuxlaptop.realtime.analytics-view);\
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../deployment/server/jaggeryapps/devicemgt/app/units/cdmf.unit.device.type.linuxlaptop.analytics-view);\

@@ -1,0 +1,11 @@
+
+{
+  "deviceType": {
+    "label": "linuxlaptop",
+    "category": "virtual",
+    "downloadAgentUri": "linuxlaptop/device/download",
+    "scopes" : [
+      "perm:linuxlaptop:enroll"
+    ]
+  }
+}

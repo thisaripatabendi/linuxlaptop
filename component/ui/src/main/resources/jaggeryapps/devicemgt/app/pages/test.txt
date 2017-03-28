@@ -1,0 +1,1 @@
+jaggeryapps/devicemgt/app/pages/cdmf.page.device.groupanalytics

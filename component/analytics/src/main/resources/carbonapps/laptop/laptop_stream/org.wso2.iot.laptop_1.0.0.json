@@ -1,0 +1,17 @@
+{
+  "name": "org.wso2.iot.laptop",
+  "version": "1.0.0",
+  "nickName": "laptop",
+  "description": "Temperature data received from the laptop",
+  "metaData": [
+    {"name":"owner","type":"STRING"},
+    {"name":"deviceId","type":"STRING"},
+    {"name":"time","type":"LONG"}
+  ],
+  "payloadData": [
+    {"name": "batterylevelsensor","type": "FLOAT"},
+    {"name": "batterystatussensor", "type": "FLOAT"},
+    {"name": "cpuusagesensor", "type": "FLOAT"}
+  ]
+}
+
